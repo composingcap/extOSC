@@ -43,6 +43,7 @@ namespace extOSC.Core.Network
 				clientInfo.Client = new UdpClient(localEndPoint);
 				clientInfo.Client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 				clientInfo.Client.DontFragment = true;
+				clientInfo.Client.EnableBroadcast = true;
 
 				_clientsList.Add(clientInfo);
 			}
